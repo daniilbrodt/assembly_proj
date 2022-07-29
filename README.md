@@ -1,8 +1,8 @@
 Task description:  
 
-`   `Counting the number of "0" bits in a 128 bit pattern being in the internal memory.    Input: Start address of the pattern (pointer) 
+`   Counting the number of "0" bits in a 128 bit pattern being in the internal memory.    Input: Start address of the pattern (pointer) `
 
-`   `Output: The number of "0" bits in 1 register 
+`   Output: The number of "0" bits in 1 register `
 
 First we need to calculate the number of zeroes in given data manually: 0x42, 0x1A,  0x7F, 0x80,  0x55, 0xAA,  0xA0, 0xCC,  0x12, 0x13,  0x11, 0x10,  0x05, 0xAA,  0x42, 0x34. There are 82 zeroes in these 16 hexadecimal numbers, while the number we want to compare in assembly will be 52H since 82 DEC will be 52 in HEX. 
 
