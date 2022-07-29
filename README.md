@@ -30,8 +30,4 @@ We can see from above that it perfectly transferred all the data from code memor
 
 ![](003.png)
 
-At the end of the counting we get 52 in HEX which means it counted 82 zeroes in all given HEX numbers which proves that the algorithm works. Then it starts counting again in the infinite loop. 
-
-Flow-chart with arrows that are in the opposite direction 
-
-![](Aspose.Words.af6b92d8-a6d8-4941-9215-3acc7a046f02.004.png)
+At the end of the counting we get 52 in HEX which means it counted 82 zeroes in all given HEX numbers which proves that the algorithm works. Then it starts counting again in the infinite loop.
