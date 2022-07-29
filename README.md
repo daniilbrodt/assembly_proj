@@ -1,13 +1,3 @@
-﻿Microcontrolled based systems 
-
-Homework 
-
-Brodt Daniil 
-
-HF14R8 
-
-“I, Brodt Daniil, declare that this is my and only my own solution” - 2021.12.08 
-
 Task description:  
 
 `   `Counting the number of "0" bits in a 128 bit pattern being in the internal memory.    Input: Start address of the pattern (pointer) 
@@ -25,9 +15,9 @@ Implemented algorithm: we need two subroutines to solve the given task
 1) Move R5 and R6 to DPH and DPL accordingly since we are going to use DPTR 
 1) Then in the LOOP1 we move the HEX numbers from code memory to internal memory. The loop proceeds as such : clear ACC (to avoid jumping extra cell because of the stored address from the previous time), move data in DPTR to ACC, move ACC to base address in IRAM via @R0. Then we increment the value of R0 to move to the next HEX number and DJNZ to check R2 value to know whether we are done with all the HEX numbers or not 
 
-![](Aspose.Words.af6b92d8-a6d8-4941-9215-3acc7a046f02.001.png)
+![](001.png)
 
-![](Aspose.Words.af6b92d8-a6d8-4941-9215-3acc7a046f02.002.png)
+![](002.png)
 
 We can see from above that it perfectly transferred all the data from code memory to internal memory 
 
@@ -38,7 +28,7 @@ We can see from above that it perfectly transferred all the data from code memor
 2) Then we enter LOOP3 that analyzes each bit with a help of rotation and carry (RLC) and increments our output R5 in case of 0. After that it decrements R3 and jumps back 
 2) After the LOOP3 we increment R0 to point to the next cell and loop back to LOOP2 to process other HEX numbers. 
 
-![](Aspose.Words.af6b92d8-a6d8-4941-9215-3acc7a046f02.003.png)
+![](003.png)
 
 At the end of the counting we get 52 in HEX which means it counted 82 zeroes in all given HEX numbers which proves that the algorithm works. Then it starts counting again in the infinite loop. 
 
